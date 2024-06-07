@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Iframe and Button</title>
     <style>
         .responsive-iframe-container {
             position: relative;
@@ -32,7 +35,31 @@
                 height: 90%; /* Adjust height for smaller screens */
             }
         }
+        .aesthetic-button {
+            background-color: #f25e42;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .aesthetic-button:hover {
+            background-color: #d04e37;
+            transform: scale(1.05);
+        }
+        .aesthetic-button:active {
+            background-color: #b2432e;
+            transform: scale(0.95);
+        }
     </style>
+</head>
+<body>
 
     <div class="responsive-iframe-container">
         <iframe loading="lazy" class="responsive-iframe" src="https://www.canva.com/design/DAGGYfTVDFU/2okhskRT1PITlyavT1AAOA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
@@ -43,5 +70,10 @@
     <p>
         <a href="https://forms.gle/msZcdK3EDeMQ2P1DA">Click here to take the post-module survey</a>
     </p>
+
+    <button class="aesthetic-button" onclick="window.location.href='https://www.example.com'">
+        Click Me
+    </button>
+
 </body>
 </html>
