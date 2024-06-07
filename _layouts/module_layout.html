@@ -3,10 +3,17 @@
 
 {% include head.html %}
 
-<body id="page-top">
+<body id="page-top" class="different-page">
   {% include nav.html %}
   
   {% include mod1.html %}
+
+  <style>
+    /* CSS for navigation font color on different-page */
+    .different-page #navigation a {
+      color: #f25e42; /* Change the color to #f25e42 */
+    }
+  </style>
 </body>
 
 </html>
