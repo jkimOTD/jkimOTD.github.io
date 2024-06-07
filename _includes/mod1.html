@@ -44,7 +44,7 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 10px 2px;
+            margin-left: auto;
             cursor: pointer;
             border-radius: 12px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -57,8 +57,10 @@
             background-color: #b2432e;
             transform: scale(0.95);
         }
-        .button-container {
-            text-align: right;
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-top: 20px;
         }
     </style>
@@ -68,18 +70,17 @@
     <div class="responsive-iframe-container">
         <iframe loading="lazy" class="responsive-iframe" src="https://www.canva.com/design/DAGGYfTVDFU/2okhskRT1PITlyavT1AAOA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-    <p>
-        <a href="https://forms.gle/i1GvF7vxFe7C3FySA">Click here to take the pre-module survey</a>
-    </p>
+    <div class="flex-container">
+        <p>
+            <a href="https://forms.gle/i1GvF7vxFe7C3FySA">Click here to take the pre-module survey</a>
+        </p>
+        <button class="aesthetic-button" onclick="window.location.href='https://www.example.com'">
+            Click here to return to main page
+        </button>
+    </div>
     <p>
         <a href="https://forms.gle/msZcdK3EDeMQ2P1DA">Click here to take the post-module survey</a>
     </p>
-
-    <div class="button-container">
-        <button class="aesthetic-button" onclick="window.location.href='https://www.example.com'">
-            Click to return to main page
-        </button>
-    </div>
 
 </body>
 </html>
