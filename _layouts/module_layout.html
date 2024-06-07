@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"> 
-
-{% include head.html %}
-
+<head>
+    {% include head.html %}
+</head>
 <body id="page-top" class="different-page">
   {% include nav.html %}
   
   {% include mod1.html %}
 
-  <style>
-    /* CSS for navigation font color on different-page */
-    .different-page #navigation a {
-      color: #f25e42; /* Change the color to #f25e42 */
+  <script>
+    // JavaScript to change navigation font color
+    var navLinks = document.querySelectorAll('#navigation a');
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].style.color = '#f25e42'; // Change the color to #f25e42
     }
-  </style>
+  </script>
 </body>
-
 </html>
