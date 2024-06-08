@@ -45,11 +45,11 @@
             background-color: #f25e42;
             border: none;
             color: white;
-            padding: 5.6px 11.2px; /* Reduced padding by an additional 20% */
+            padding: 7px 14px; /* Reduced padding by 30% */
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 10.08px; /* Reduced font size by an additional 20% */
+            font-size: 12.6px; /* Reduced font size by 30% */
             cursor: pointer;
             border-radius: 12px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -62,10 +62,6 @@
         .aesthetic-button:active {
             background-color: #b2432e;
             transform: scale(0.95);
-        }
-        .submit-button {
-            padding: 9px 18px; /* Reduced padding by 10% */
-            font-size: 19.8px; /* Reduced font size by 10% */
         }
         .flex-container {
             display: flex;
@@ -103,7 +99,7 @@
         <div id="password-section" class="password-container">
             <p>Enter password:</p>
             <input type="password" id="password-input" placeholder="Enter password">
-            <button class="submit-button" onclick="checkPassword()">Submit</button>
+            <button onclick="checkPassword()">Submit</button>
             <button class="aesthetic-button" onclick="window.location.href='https://jkimotd.github.io/test/'">
                 Click here to go back to main page
             </button>
@@ -119,4 +115,39 @@
                 Click here to go back to main page
             </button>
         </div>
-        <p><a href="https://forms.gle/JvQD3g5iVhB9Zujd6" class="survey-link">Click here to take the post-module survey<
+        <p><a href="https://forms.gle/JvQD3g5iVhB9Zujd6" class="survey-link">Click here to take the post-module survey</a></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set the time when the section should be unlocked
+            const unlockTime = new Date("June 12, 2024 19:00:00").getTime();
+
+            // Function to check the current time and unlock the section if the time has come
+            function checkTime() {
+                const currentTime = new Date().getTime();
+
+                if (currentTime >= unlockTime) {
+                    document.getElementById("locked-section").style.display = "block";
+                } else {
+                    document.getElementById("placeholder-section").style.display = "block";
+                }
+            }
+
+            // Check the time immediately on load
+            checkTime();
+        });
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById("password-input").value;
+            const correctPassword = "flute"; // Set your password here
+
+            if (enteredPassword === correctPassword) {
+                document.getElementById("locked-section").style.display = "block";
+                document.getElementById("placeholder-section").style.display = "none";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
