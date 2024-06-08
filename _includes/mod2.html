@@ -45,11 +45,11 @@
             background-color: #f25e42;
             border: none;
             color: white;
-            padding: 9px 18px; /* Reduced padding by 10% */
+            padding: 7px 14px; /* Reduced padding by 30% */
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 14.4px; /* Reduced font size by 10% */
+            font-size: 12.6px; /* Reduced font size by 30% */
             cursor: pointer;
             border-radius: 12px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -88,12 +88,16 @@
             margin-top: 10px;
             font-size: 22px; /* Increased font size by 20 units */
         }
+        .password-container p {
+            font-size: 42px; /* Increased font size by 20 units */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div id="placeholder-section">
         <div id="password-section" class="password-container">
-            <p>Enter password: </p>
+            <p>Enter password:</p>
             <input type="password" id="password-input" placeholder="Enter password">
             <button onclick="checkPassword()">Submit</button>
             <button class="aesthetic-button" onclick="window.location.href='https://jkimotd.github.io/test/'">
@@ -147,4 +151,3 @@
     </script>
 </body>
 </html>
-
