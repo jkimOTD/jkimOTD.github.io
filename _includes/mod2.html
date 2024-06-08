@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,6 +41,33 @@
         #placeholder-section {
             display: none;
         }
+        .aesthetic-button {
+            background-color: #f25e42;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .aesthetic-button:hover {
+            background-color: #d04e37;
+            transform: scale(1.05);
+        }
+        .aesthetic-button:active {
+            background-color: #b2432e;
+            transform: scale(0.95);
+        }
+        .flex-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -55,11 +82,11 @@
         <div class="responsive-iframe-container">
             <iframe loading="lazy" class="responsive-iframe" src="https://www.canva.com/design/DAGGjTzX6Xw/qkMmK001fgVaqK_Q3bpadA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
         </div>
-        
-        <a href="https://forms.gle/iZ6csX2B61TStuqVA">Click here to take the pre-module survey</a><br> 
-            
-        <a href="https://forms.gle/JvQD3g5iVhB9Zujd6">Click here to take the post-module survey</a>
-
+        <div class="flex-container">
+            <a href="https://forms.gle/iZ6csX2B61TStuqVA">Click here to take the pre-module survey</a>
+            <button class="aesthetic-button" onclick="window.location.href='https://jkimotd.github.io/test/'">Click Me</button>
+        </div>
+        <p><a href="https://forms.gle/JvQD3g5iVhB9Zujd6">Click here to take the post-module survey</a></p>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
