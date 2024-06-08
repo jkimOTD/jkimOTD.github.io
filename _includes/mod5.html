@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,25 +41,81 @@
         #placeholder-section {
             display: none;
         }
+        .aesthetic-button {
+            background-color: #f25e42;
+            border: none;
+            color: white;
+            padding: 7px 14px; /* Reduced padding by 30% */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12.6px; /* Reduced font size by 30% */
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 10px; /* Added margin-top to position it under the password input */
+        }
+        .aesthetic-button:hover {
+            background-color: #d04e37;
+            transform: scale(1.05);
+        }
+        .aesthetic-button:active {
+            background-color: #b2432e;
+            transform: scale(0.95);
+        }
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .survey-link {
+            font-size: 16px;
+            text-decoration: none;
+            color: #000; /* or any other color */
+            margin: 0 10px; /* optional margin to space out the links */
+        }
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            font-size: 22px; /* Increased font size by 20 units */
+        }
+        .password-container input, .password-container button {
+            margin-top: 10px;
+            font-size: 22px; /* Increased font size by 20 units */
+        }
+        .password-container p {
+            font-size: 42px; /* Increased font size by 20 units */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div id="placeholder-section">
-        <div id="password-section">
-            <p>Enter password: </p>
+        <div id="password-section" class="password-container">
+            <p>Enter password:</p>
             <input type="password" id="password-input" placeholder="Enter password">
             <button onclick="checkPassword()">Submit</button>
+            <button class="aesthetic-button" onclick="window.location.href='https://jkimotd.github.io/test/'">
+                Click here to go back to main page
+            </button>
         </div>
     </div>
     <div id="locked-section">
         <div class="responsive-iframe-container">
             <iframe loading="lazy" class="responsive-iframe" src="https://www.canva.com/design/DAGHTBVLKI8/VUVyTustHXsfW5S-8NiDnw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
         </div>
-        
-        <a href="https://forms.gle/f4wN1JDzSyrV9MK98">Click here to take the pre-module survey</a><br> 
-            
-        <a href="https://forms.gle/ykqf4N7Kr2HXAPc88">Click here to take the post-module survey</a>
-
+        <div class="flex-container">
+            <a href="https://forms.gle/f4wN1JDzSyrV9MK98" class="survey-link">Click here to take the pre-module survey</a>
+            <button class="aesthetic-button" onclick="window.location.href='https://jkimotd.github.io/test/'">
+                Click here to go back to main page
+            </button>
+        </div>
+        <p><a href="https://forms.gle/ykqf4N7Kr2HXAPc88" class="survey-link">Click here to take the post-module survey</a></p>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
