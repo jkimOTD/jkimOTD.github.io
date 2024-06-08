@@ -75,11 +75,19 @@
             color: #000; /* or any other color */
             margin: 0 10px; /* optional margin to space out the links */
         }
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .password-container button {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div id="placeholder-section">
-        <div id="password-section">
+        <div id="password-section" class="password-container">
             <p>Enter password: </p>
             <input type="password" id="password-input" placeholder="Enter password">
             <button onclick="checkPassword()">Submit</button>
